@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Account(models.Model):
+class Accounts(models.Model):
     pk_id = models.AutoField(primary_key=True)
     email = models.EmailField(max_length=254, unique=True)
     nick_name = models.CharField(max_length=16, unique=True)
