@@ -1,7 +1,6 @@
 # from rest_framework.generics import ListAPIView, RetrieveAPIView, CreateAPIView, UpdateAPIView, DestroyAPIView
 #
 #
-
 #
 #
 # class AccountListView(ListAPIView):
@@ -34,5 +33,8 @@ from .serializers import AccountSerializer
 
 
 class AccountViewSet(viewsets.ModelViewSet):
+    """
+    이 뷰셋은 `list`와 `create`, `retrieve`, `update`, 'destroy` 기능을 자동으로 지원
+    """
     serializer_class = AccountSerializer
     queryset = Accounts.objects.all()
